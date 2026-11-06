@@ -1,0 +1,14 @@
+{
+    "name": "LeoECSLiteExtensions.AsyncSystem",
+    "rootNamespace": "LeoECSLiteExtensions.Async",
+    "references": ["Leopotam.EcsLite", "LeoECSLiteExtensions.EcsTask"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

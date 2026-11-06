@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- Unity loads analyzers built for netstandard2.0 against Roslyn 4.3. -->
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+    <IsRoslynComponent>true</IsRoslynComponent>
+    <RootNamespace>LeoECSLiteExtensions.Analyzers</RootNamespace>
+    <AssemblyName>LeoECSLiteExtensions.Analyzers</AssemblyName>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <!-- RS2008 asks for release tracking files, which only matter for analyzers shipped as NuGet packages. -->
+    <NoWarn>$(NoWarn);RS2008</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Shared with the EcsTask analyzers: one source, compiled into both DLLs. -->
+    <Compile Include="../../../ecs-task/Analyzers~/LeoECSLiteExtensions.EcsTask.Analyzers/AsyncCode.cs" Link="Shared/AsyncCode.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.3.1" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <!-- A Release build copies the DLL next to its .meta file, where Unity loads it from. -->
+  <Target Name="CopyToUnityPackage" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(MSBuildThisFileDirectory)../../Analyzers/" />
+  </Target>
+</Project>

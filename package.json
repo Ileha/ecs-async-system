@@ -1,0 +1,11 @@
+{
+  "name": "com.alexey-developer89.ecs-async-system",
+  "version": "1.0.0",
+  "displayName": "LeoECS Lite Async Run System",
+  "description": "LeoECS Lite run system whose body is an async EcsTask.",
+  "unity": "2020.3",
+  "author": {
+    "name": "Alexey",
+    "email": "i.leha98@outlook.com"
+  }
+}
