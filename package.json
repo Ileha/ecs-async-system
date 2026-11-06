@@ -4,6 +4,10 @@
   "displayName": "LeoECS Lite Async Run System",
   "description": "LeoECS Lite run system whose body is an async EcsTask.",
   "unity": "2020.3",
+  "dependencies": {
+    "com.alexey-developer89.ecs-task": "1.0.0",
+    "com.leopotam.ecslite": "2026.4.25"
+  },
   "author": {
     "name": "Alexey",
     "email": "i.leha98@outlook.com"

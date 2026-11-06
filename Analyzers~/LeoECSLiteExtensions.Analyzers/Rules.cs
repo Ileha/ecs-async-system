@@ -4,8 +4,7 @@ namespace LeoECSLiteExtensions.Analyzers
 {
     /// <summary>
     /// ECS rules of the async group. The ids continue the LEOECS numbering of the source generators; 1xx is the
-    /// async group. LEOECS103 and LEOECS105 need no ECS and live in com.alexey-developer89.ecs-task.
-    /// See README.md for examples.
+    /// async group. See README.md for examples.
     /// </summary>
     internal static class Rules
     {

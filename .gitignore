@@ -1,0 +1,8 @@
+# Build output of the analyzer projects (`dotnet build` / `dotnet test` in Analyzers~).
+# The DLL Unity loads lives in Analyzers/ and stays tracked.
+Analyzers~/**/[Bb]in/
+Analyzers~/**/[Oo]bj/
+
+# IDE caches created when the analyzer projects are opened.
+.idea/
+.vs/
