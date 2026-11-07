@@ -48,4 +48,4 @@ Main statements are:
 
 ## Dependencies
 
-Depends on: `com.alexey-developer89.ecs-task`, `com.leopotam.ecslite`.
+Depends on: [com.alexey-developer89.ecs-task](https://github.com/Ileha/ecs-task), [com.leopotam.ecslite](https://github.com/Leopotam/ecslite).
